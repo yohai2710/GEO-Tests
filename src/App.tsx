@@ -27,7 +27,7 @@ function App() {
       complete: (results: ParseResult<Query>) => {
         setData(results.data);
       },
-      error: (error) => {
+      error: (error: any) => {
         console.error("Error loading CSV:", error);
       },
     });
