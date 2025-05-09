@@ -1,0 +1,136 @@
+body,
+html,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-color: hsl(0, 0%, 95%);
+}
+
+#root {
+  max-width: 1560px;
+  margin: 0 auto;
+  padding: 2rem;
+  height: 100%;
+  background-color: hsl(0, 0%, 95%);
+}
+
+
+.nav {
+  display: flex;
+  width: 100%;
+}
+
+.nav-item {
+  flex: 1;
+  /* each item takes equal space (33%) */
+  text-align: center;
+}
+
+.app {
+  padding-top: 20px;
+
+}
+
+.content {
+  width: 70vw;
+}
+
+.main-title {
+  height: 60px;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  font-size: 42px;
+  font-weight: bold;
+  background: -webkit-linear-gradient(#eee, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.title {
+  height: 60px;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  padding-top: 16px;
+
+}
+
+
+.title-left {
+  width: 75%;
+}
+
+.title-left h2 {
+  font-size: 30px;
+  background: -webkit-linear-gradient(#eee, indigo);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card {
+  background-color: white;
+  min-height: 60px;
+  border-radius: 8px;
+  box-shadow: 1px 2px indigo;
+  padding: 8px;
+  margin-top: 16px;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;  /* spreads content across full width */
+  align-items: center;
+  width: 100%; /* make sure it fills the container */
+}
+
+.filter-container p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.custom-dropdown {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  font-size: 14px;
+  color: #333;
+  transition: all 0.3s ease;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.custom-dropdown:hover {
+  border-color: indigo;
+  box-shadow: 1px 2px 8px rgba(75, 0, 130, 0.3);
+}
+
+.custom-dropdown:focus {
+  outline: none;
+  border-color: indigo;
+  box-shadow: 0 0 0 3px rgba(75, 0, 130, 0.2);
+}
+
+.site-info {
+  padding: 0px;
+  margin: 0;
+}
+
+.site-info p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.site-info a {
+  color: indigo;
+  text-decoration: none;
+}
+
+.site-info a:hover {
+  text-decoration: underline;
+}
