@@ -74,11 +74,12 @@ html,
 
 .card {
   background-color: white;
-  min-height: 60px;
+  min-height: 55px;
   border-radius: 8px;
   box-shadow: 1px 2px indigo;
-  padding: 8px;
-  margin-top: 16px;
+  padding: 2px 16px;
+  margin-top: 8px;
+  font-size: 14px;
 }
 
 .filter-container {
@@ -95,6 +96,7 @@ html,
 
 .custom-dropdown {
   padding: 8px 12px;
+  width: 300px;
   border: 1px solid #ccc;
   border-radius: 6px;
   background-color: white;
@@ -122,8 +124,9 @@ html,
 }
 
 .site-info p {
-  margin: 4px 0;
   font-size: 14px;
+  margin-bottom: 16px;
+  margin-top: 8px;
 }
 
 .site-info a {

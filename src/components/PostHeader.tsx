@@ -10,7 +10,7 @@ function PostHeader({ businessNames, selectedBusiness, onFilterChange }: PostHea
   return (
     <div className='title'>
       <div className='title-left'>
-        <h2>See how AI see <strong>your</strong> site...</h2>
+        <h2>AI Visibility Overview</h2>
       </div>
       <div className='filter-container'>
       <p></p>
