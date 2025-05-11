@@ -17,23 +17,34 @@ type Query = {
 
 function App() {
   const [data, setData] = useState<Query[]>([]);
-  const [selectedBusiness, setSelectedBusiness] = useState<string>('Little Maestros');
+  const [selectedBusiness, setSelectedBusiness] = useState<string>('Iconic Mystery Box');
 
   const CSVReader = () => {
-    Papa.parse<Query>("/results_output.csv", {
-      download: true,
-      header: true,
-      skipEmptyLines: true,
-      complete: (results: ParseResult<Query>) => {
-        setData(results.data);
-      },
-      error: (error: any) => {
-        console.error("Error loading CSV:", error);
-      },
+    const files = ["/results_output.csv", "/results_output_2.csv"];
+    const allData: Query[] = [];
+  
+    let completedCount = 0;
+  
+    files.forEach((file) => {
+      Papa.parse<Query>(file, {
+        download: true,
+        header: true,
+        skipEmptyLines: true,
+        complete: (results: ParseResult<Query>) => {
+          allData.push(...results.data);
+          completedCount += 1;
+  
+          if (completedCount === files.length) {
+            setData(allData);
+          }
+        },
+        error: (error: any) => {
+          console.error(`Error loading CSV from ${file}:`, error);
+        },
+      });
     });
   };
-
-
+  
   useEffect(() => {
     CSVReader();
   }, []);
