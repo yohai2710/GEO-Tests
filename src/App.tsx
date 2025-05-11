@@ -20,7 +20,7 @@ function App() {
   const [selectedBusiness, setSelectedBusiness] = useState<string>('Iconic Mystery Box');
 
   const CSVReader = () => {
-    const files = ["/results_output.csv", "/results_output_2.csv"];
+    const files = ["/results_output.csv", "/results_output_2.csv", "/results_output_3.csv"];
     const allData: Query[] = [];
   
     let completedCount = 0;
